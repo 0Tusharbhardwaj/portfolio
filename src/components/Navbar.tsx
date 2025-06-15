@@ -1,23 +1,25 @@
 import React from "react";
+import { FaHome, FaUser, FaTools, FaFolderOpen, FaEnvelope } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#0d1117] border-b border-gray-700 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-white font-bold text-xl tracking-widest">TUSHAR.dev</div>
-        <div className="space-x-6 hidden md:flex">
-          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-gray-300 hover:text-cyan-400 transition duration-300"
-            >
-              {item}
-            </a>
-          ))}
-        </div>
-      </div>
-    </nav>
+    <div className="fixed right-4 top-1/3 z-50 flex flex-col space-y-4 p-2 rounded-xl bg-[#1a1a1a] shadow-lg">
+      <a href="#home" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-xl">
+        <FaHome />
+      </a>
+      <a href="#about" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-xl">
+        <FaUser />
+      </a>
+      <a href="#skills" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-xl">
+        <FaTools />
+      </a>
+      <a href="#projects" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-xl">
+        <FaFolderOpen />
+      </a>
+      <a href="#contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 text-xl">
+        <FaEnvelope />
+      </a>
+    </div>
   );
 };
 
