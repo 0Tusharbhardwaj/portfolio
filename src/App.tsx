@@ -15,9 +15,8 @@ function App() {
   };
 
   useEffect(() => {
-    // Smooth scroll behavior
+    // Enable smooth scroll
     document.documentElement.style.scrollBehavior = 'smooth';
-
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
     };
@@ -29,9 +28,11 @@ function App() {
 
   return (
     <>
+      {/* Floating Icon Navbar on Right Side */}
       <Navbar />
+
       <div className="min-h-screen bg-black text-white overflow-x-hidden">
-        {/* Main Sections with proper IDs for navbar scroll */}
+        {/* Sections with matching IDs for navbar links */}
         <section id="home">
           <Hero />
         </section>
@@ -56,7 +57,7 @@ function App() {
         <footer className="bg-black border-t border-gray-800 py-8">
           <div className="container mx-auto px-6 text-center">
             <p className="text-gray-400">
-              © 2024 Tushar Sharma. Crafted with passion for innovation.
+              © 2024 Your Name. Crafted with passion and purpose.
             </p>
             <div className="mt-4 flex justify-center space-x-6">
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
