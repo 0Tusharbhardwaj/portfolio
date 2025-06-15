@@ -96,18 +96,18 @@ const Hero: React.FC = () => {
 
           </h1>
 
-          <h2 className="text-3xl md:text-5xl text-gray-300 mb-6 font-light">
-            Aspiring{' '}
-            <span className="text-cyan-400 font-semibold relative">
-              Web3
-              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
-            </span>
-            {' '}&{' '}
-            <span className="text-purple-400 font-semibold relative">
-              Cloud Engineer
-              <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-transparent"></div>
-            </span>
-          </h2>
+         <h2 className="text-3xl md:text-5xl text-gray-300 mb-6 font-light">
+  Aspiring{' '}
+  <span className="text-cyan-400 font-semibold relative">
+    Full Stack Developer
+    <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+  </span>
+  {' '}&{' '}
+  <span className="text-purple-400 font-semibold relative">
+    Cloud Enthusiast
+    <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-transparent"></div>
+  </span>
+</h2>
 
           <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
             Exploring the edge of{' '}
@@ -140,9 +140,9 @@ const Hero: React.FC = () => {
         {/* Social Links */}
         <div className="flex justify-center space-x-6 mb-16">
           {[
-            { icon: Github, href: '#', color: 'hover:text-gray-300' },
-            { icon: Linkedin, href: '#', color: 'hover:text-blue-400' },
-            { icon: Mail, href: '#', color: 'hover:text-green-400' },
+            { icon: Github, href: 'https://github.com/0Tusharbhardwaj/', color: 'hover:text-gray-300' },
+            { icon: Linkedin, href: 'www.linkedin.com/in/tushar0bhrardwaj', color: 'hover:text-blue-400' },
+            { icon: Mail, href: 'mailto:redburg035@gmail.com', color: 'hover:text-green-400' },
           ].map((social, index) => {
             const IconComponent = social.icon;
             return (
