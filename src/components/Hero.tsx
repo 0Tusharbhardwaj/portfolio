@@ -65,10 +65,11 @@ const Hero: React.FC = () => {
             <div className="relative w-full h-full rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 p-1.5 animate-pulse-glow">
               <div className="w-full h-full rounded-full overflow-hidden bg-gray-800 border-2 border-gray-700">
                 <img
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400"
-                  alt="Alex Chen - Professional Portrait"
-                  className="w-full h-full object-cover rounded-full transform group-hover:scale-110 transition-transform duration-500"
-                />
+  src="/profile.png"
+  alt="Tushar Bhardwaj- Profile"
+  className="w-full h-full object-cover rounded-full transform group-hover:scale-110 transition-transform duration-500"
+/>
+
               </div>
             </div>
             
@@ -90,8 +91,9 @@ const Hero: React.FC = () => {
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-green-400 bg-clip-text text-transparent animate-gradient-xy">
-              Alex Chen
-            </span>
+  Tushar Bhardwaj
+</span>
+
           </h1>
 
           <h2 className="text-3xl md:text-5xl text-gray-300 mb-6 font-light">
