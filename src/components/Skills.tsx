@@ -74,9 +74,8 @@ const Skills: React.FC = () => {
   return (
     <section 
       ref={sectionRef}
-      className="py-24 bg-gradient-to-b from-gray-800 via-black to-gray-900 relative overflow-hidden"
+      className="py-24 bg-gradient-to-b from-gray-950 via-black to-gray-900 relative overflow-hidden"
     >
-      {/* Enhanced Circuit Background */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>
@@ -91,7 +90,6 @@ const Skills: React.FC = () => {
         </svg>
       </div>
 
-      {/* Floating Tech Icons */}
       <div className="absolute inset-0">
         <Cpu className="absolute top-20 right-20 w-16 h-16 text-cyan-400/30 animate-float" />
         <Layers className="absolute bottom-20 left-20 w-20 h-20 text-purple-400/30 animate-float" style={{ animationDelay: '1s' }} />
@@ -99,21 +97,20 @@ const Skills: React.FC = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          {/* Enhanced Section Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6 animate-pulse-glow">
               <Code className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Technical Arsenal
+              My Technical Arsenal
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              A comprehensive toolkit for building the next generation of web applications
+              A deep, ever-evolving toolkit to engineer innovative, reliable, and scalable systems
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-green-400 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {skills.map((skill, index) => {
               const IconComponent = skill.icon;
               return (
@@ -126,12 +123,10 @@ const Skills: React.FC = () => {
                   onMouseEnter={() => setHoveredSkill(index)}
                   onMouseLeave={() => setHoveredSkill(null)}
                 >
-                  <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 h-full transform group-hover:scale-105 transition-all duration-300 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden">
-                    {/* Animated Background */}
-                    <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                    
-                    {/* Icon Header */}
-                    <div className="flex items-center mb-8 relative z-10">
+                  <div className="bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 h-full group-hover:scale-[1.02] transition-all duration-300 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 relative overflow-hidden">
+                    <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+
+                    <div className="flex items-center mb-6 relative z-10">
                       <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${skill.color} p-3 mr-4 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
                         <IconComponent className="w-full h-full text-white" />
                       </div>
@@ -143,20 +138,15 @@ const Skills: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Description */}
-                    <p className="text-gray-400 text-sm mb-8 leading-relaxed relative z-10">
+                    <p className="text-gray-400 text-sm mb-6 leading-relaxed relative z-10">
                       {skill.description}
                     </p>
 
-                    {/* Technologies */}
-                    <div className="space-y-4 mb-6 relative z-10">
+                    <div className="space-y-3 mb-6 relative z-10">
                       {skill.technologies.map((tech, techIndex) => (
                         <div
                           key={techIndex}
-                          className="flex items-center justify-between p-3 bg-gray-700/30 backdrop-blur-sm rounded-lg border border-gray-600/30 group-hover:border-cyan-500/30 transition-all duration-300 hover:bg-gray-600/30"
-                          style={{
-                            animationDelay: `${techIndex * 0.1}s`
-                          }}
+                          className="flex items-center justify-between p-2.5 bg-gray-700/30 backdrop-blur-sm rounded-md border border-gray-600/30 hover:bg-gray-600/30 hover:border-cyan-500/30 transition-all duration-300"
                         >
                           <span className="text-gray-300 text-sm font-medium">
                             {tech}
@@ -165,16 +155,9 @@ const Skills: React.FC = () => {
                             {[...Array(5)].map((_, i) => (
                               <div
                                 key={i}
-                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                                  hoveredSkill === index
-                                    ? 'bg-cyan-400 animate-pulse'
-                                    : i < 4
-                                    ? 'bg-gray-500'
-                                    : 'bg-gray-600'
+                                className={`w-2 h-2 rounded-full ${
+                                  hoveredSkill === index ? 'bg-cyan-400 animate-pulse' : i < 4 ? 'bg-gray-500' : 'bg-gray-600'
                                 }`}
-                                style={{
-                                  animationDelay: `${i * 0.1}s`
-                                }}
                               />
                             ))}
                           </div>
@@ -182,7 +165,6 @@ const Skills: React.FC = () => {
                       ))}
                     </div>
 
-                    {/* Enhanced Progress Bar */}
                     <div className="relative z-10">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-xs text-gray-400">Proficiency</span>
@@ -190,7 +172,7 @@ const Skills: React.FC = () => {
                       </div>
                       <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden">
                         <div
-                          className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000 relative overflow-hidden`}
+                          className={`h-2 rounded-full bg-gradient-to-r ${skill.color} transition-all duration-1000`}
                           style={{ 
                             width: hoveredSkill === index ? `${skill.proficiency}%` : '0%'
                           }}
@@ -200,21 +182,16 @@ const Skills: React.FC = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Enhanced Glow Effect */}
-                  <div className={`absolute -inset-0.5 bg-gradient-to-r ${skill.color} rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur`} />
                 </div>
               );
             })}
           </div>
 
-          {/* Skills Summary */}
-          <div className="mt-16 text-center">
-            <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">Continuous Learning Journey</h3>
+          <div className="mt-20 text-center">
+            <div className="bg-gradient-to-r from-gray-800/60 to-gray-900/60 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">My Commitment to Growth</h3>
               <p className="text-gray-400 leading-relaxed">
-                Technology evolves rapidly, and so do I. Every day brings new opportunities to learn, 
-                experiment, and push the boundaries of what's possible in Web3 and Cloud Engineering.
+                The tech world moves fast—and I move faster. With each new challenge, I expand my skillset, adapt to change, and strive to build impactful digital experiences.
               </p>
             </div>
           </div>
